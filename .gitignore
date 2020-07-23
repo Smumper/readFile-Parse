@@ -10,7 +10,7 @@ __pycache__/
 .vscode
 
 # excel / csv
-.csv
+*.csv
 
 # Distribution / packaging
 .Python
