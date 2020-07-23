@@ -7,6 +7,9 @@ class readFile:
         self.path = path
 
     def read(self):
-        with open(self.path, "r", newline="", encoding="utf-16") as file:
-            return list(map(lambda x: x, file))
+        try:
+            with open(self.path, "r", newline="", encoding="utf-16") as file:
+                return list(map(lambda x: x, file))
+        except FileNotFoundError:
+            return None
 
