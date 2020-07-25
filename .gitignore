@@ -8,6 +8,7 @@ __pycache__/
 
 # vscode
 .vscode
+.DC_Store
 
 # excel / csv
 *.csv
@@ -133,3 +134,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.DS_Store
