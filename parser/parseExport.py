@@ -63,5 +63,26 @@ class parseExport(parseFile):
             ):
                 self.fgr_row.append(count)
 
-    def parsedMSR(self):
+    def getProject(self):
+        return self.data[self.Projekt_c]
+
+    def getArea(self):
+        return self.data[self.area_a : self.area_e]
+
+    def getVar(self):
+        return self.data[self.var_a : self.area_e]
+
+    def getMSR(self):
         return self.data[self.msr_a : self.msr_e]
+
+    def getPData(self):
+        return self.data[self.data_msr_a : self.data_msr_e]
+
+    def getHWM(self):
+        return self.data[self.hwm_a : self.hwm_e]
+
+    def getEAM(self):
+        return self.data[self.eam_a : self.eam_e]
+
+    def getFGR(self):
+        return self.fgr_row

@@ -12,5 +12,33 @@ class parseFile:
         pass
 
     @abstractmethod
-    def parsedMSR(self):
+    def getProject(self):
+        pass
+
+    @abstractmethod
+    def getArea(self):
+        pass
+
+    @abstractmethod
+    def getVar(self):
+        pass
+
+    @abstractmethod
+    def getMSR(self):
+        pass
+
+    @abstractmethod
+    def getPData(self):
+        pass
+
+    @abstractmethod
+    def getHWM(self):
+        pass
+
+    @abstractmethod
+    def getEAM(self):
+        pass
+
+    @abstractmethod
+    def getFGR(self):
         pass
