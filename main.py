@@ -11,3 +11,4 @@ filepath = (
 file = readFile(filepath)
 parsing_file = parseExport()
 parsing_file.parse(file.read())
+print(parsing_file.getPData())

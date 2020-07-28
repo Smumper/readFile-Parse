@@ -74,14 +74,18 @@ class parseExport(parseFile):
         return self.data[self.var_a : self.area_e]
 
     def getMSR(self):
-        msr_name = {}
+        msr_rec = {}
         for line in itertools.islice(self.data, self.msr_a + 1, self.msr_e - 1, 2):
-            msr_r = line.strip().split(";")
-            msr_name.update({msr_r[2]: msr_r[4:-1]})
-        return msr_name
+            msr_rec.update({line.strip().split(";")[2]: line})
+        return msr_rec
 
     def getPData(self):
-        return self.data[self.data_msr_a : self.data_msr_e]
+        P_Data = {}
+        for pdata in range(self.data_msr_a, self.data_msr_e):
+            if "[LAD:MSR_REF]" in self.data[pdata]:
+                msr_name = self.data[pdata].strip().split(";")[1]
+                P_Data.update({msr_name: self.data[pdata + 1]})
+        return P_Data
 
     def getHWM(self):
         return self.data[self.hwm_a : self.hwm_e]
