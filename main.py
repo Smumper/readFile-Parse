@@ -13,7 +13,7 @@ def main():
     file = readFile(filepath)
     parsing_file = parseExport()
     parsing_file.parse(file.read())
-    print(parsing_file.getArea())
+    print(parsing_file.getProject())
 
 
 if __name__ == "__main__":

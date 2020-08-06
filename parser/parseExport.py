@@ -1,4 +1,3 @@
-import itertools
 from parser.parseFile import parseFile
 
 

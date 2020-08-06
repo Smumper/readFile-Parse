@@ -1,14 +1,45 @@
-class Project_information:
+class ProjektInformation:
     def __init__(self, data):
         self.data = data.split(";")
 
     def getName(self):
+        pass
+
+    def getComm(self):
+        pass
+
+    def getCreater(self):
+        pass
+
+    def getCompany(self):
+        pass
+
+    def getVersionDate(self):
+        pass
+
+    def getCreationDate(self):
+        pass
+
+    def output(self):
+        out_dict = {
+            "Name": self.getName(),
+            "Kommentar": self.getComm(),
+            "Ersteller": self.getCreater(),
+            "Firma": self.getCompany(),
+            "Version": self.getVersionDate(),
+            "Erstellung": self.getCreationDate(),
+        }
+        return out_dict
+
+
+class Freelance(ProjektInformation):
+    def getName(self):
         return self.data[1]
 
-    def getCommi(self):
+    def getComm(self):
         return self.data[2]
 
-    def getCreator(self):
+    def getCreater(self):
         return self.data[3]
 
     def getCompany(self):
