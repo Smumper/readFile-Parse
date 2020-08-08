@@ -1,33 +1,25 @@
+# Input sind zwei Dicts einmal record und einmal para data
+# Output kann einzeln oder über eine For schleife o.Ä. abgefragt werden.
 class MSR:
-    __Alarme = {}
-    __Info = {}
-
     def Information(self, record):
         if record == "":
             print("HALLO")
         else:
             pass
 
-    def Alarme(self, t2):
+    def Alarme(self, para_data):
         pass
 
-    def Parameter(self, t2):
-        pass
-
-    def Tack(self):
+    def Parameter(self, para_data):
         pass
 
     def analyse(self, record, para_data):
         self.Information(record)
         self.Alarme(para_data)
         self.Parameter(para_data)
-        self.Tack()
 
 
 class Mbin(MSR):
-    __Alarme = {}
-    __Info = {}
-
     def Alarme(self, para_data):
         pass
 
@@ -36,9 +28,6 @@ class Mbin(MSR):
 
 
 class Mana(MSR):
-    __Alarme = {}
-    __Info = {}
-
     def Alarme(self, para_data):
         pass
 
@@ -47,18 +36,9 @@ class Mana(MSR):
 
 
 class C_C(MSR):
-    __Alarme = {}
-    __Info = {}
-
     def Alarme(self, para_data):
         pass
 
     def Parameter(self, para_data):
         pass
 
-
-t1 = ""
-t2 = "1"
-msr = MSR()
-test = Mbin()
-print(test.analyse(t1, t2))
