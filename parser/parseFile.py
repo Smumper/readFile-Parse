@@ -4,7 +4,7 @@ from abc import ABCMeta, abstractmethod
 class parseFile:
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=[], parsing=False):
+    def __init__(self, data=[], parsing=None):
         pass
 
     @abstractmethod

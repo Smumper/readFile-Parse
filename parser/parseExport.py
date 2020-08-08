@@ -3,7 +3,7 @@ from parser.parseFile import parseFile
 
 class parseExport(parseFile):
     # Auto parsing bei True dann muss daten file direkt angegeben werden
-    def __init__(self, data=[], parsing=False):
+    def __init__(self, data=[], parsing=None):
         self.key_worte = [
             "[BEGIN_PROJECTHEADER]",
             "[BEGIN_AREADEFINITION]",
@@ -23,7 +23,7 @@ class parseExport(parseFile):
             "Pool",
         ]
 
-        if parsing == True:
+        if parsing is None:
             self.parse(data)
 
     def parse(self, data):

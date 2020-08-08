@@ -1,6 +1,9 @@
 class MSR:
-    def Information(self, t1):
-        if t1 == "":
+    __Alarme = {}
+    __Info = {}
+
+    def Information(self, record):
+        if record == "":
             print("HALLO")
         else:
             pass
@@ -14,15 +17,43 @@ class MSR:
     def Tack(self):
         pass
 
-    def analyse(self, t1, t2):
-        self.Information(t1)
-        self.Alarme(t2)
-        self.Parameter(t2)
+    def analyse(self, record, para_data):
+        self.Information(record)
+        self.Alarme(para_data)
+        self.Parameter(para_data)
         self.Tack()
 
 
 class Mbin(MSR):
-    def Alarme(self, t2):
+    __Alarme = {}
+    __Info = {}
+
+    def Alarme(self, para_data):
+        pass
+
+    def Parameter(self, para_data):
+        pass
+
+
+class Mana(MSR):
+    __Alarme = {}
+    __Info = {}
+
+    def Alarme(self, para_data):
+        pass
+
+    def Parameter(self, para_data):
+        pass
+
+
+class C_C(MSR):
+    __Alarme = {}
+    __Info = {}
+
+    def Alarme(self, para_data):
+        pass
+
+    def Parameter(self, para_data):
         pass
 
 

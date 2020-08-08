@@ -2,7 +2,7 @@
 from readFile import readFile
 from parser.parseFile import parseFile
 from parser.parseExport import parseExport
-from projectinfo import Project_information
+from projectinfo import ProjektInformation
 from DataToDict import DataToDict
 
 
@@ -13,7 +13,6 @@ def main():
     file = readFile(filepath)
     parsing_file = parseExport()
     parsing_file.parse(file.read())
-    print(parsing_file.getProject())
 
 
 if __name__ == "__main__":
